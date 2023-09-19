@@ -1,1 +1,4 @@
-#screen.fill((background_color))
+import pygame
+import screen
+import consts
+
