@@ -1,6 +1,9 @@
 import pygame
 import consts
 import random
+
+import game_field
+
 pygame.init()
 
 pygame.display.set_caption("The Flag")
@@ -17,3 +20,11 @@ def screen_display():
     pygame.display.update()
 
 
+def draw_grid():
+    screen.fill(consts.BLACK)
+    for x in range(consts.WINDOW_WIDTH):
+        for y in range(consts.WINDOW_HEIGHT):
+            rect = pygame.Rect(x * consts.GRID_SIZE, y * consts.GRID_SIZE, consts.GRID_SIZE, consts.GRID_SIZE)
+            pygame.draw.rect(screen, consts.GREEN, rect, 1)
+    game_field.mine_placement()
+    pygame.display.flip()

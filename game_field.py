@@ -1,4 +1,11 @@
 #making the grid
+import pygame
+import random
+
+import consts
+import screen
+
+
 def grid():
     game_field = []
     empty = "EMPTY"
@@ -7,6 +14,15 @@ def grid():
         for column in range(50):
             row.append(empty)
         game_field.append(row)
-    print(*game_field, sep="\n")
+    return game_field
 
-grid()
+def mine_placement():
+    game_field = grid()
+    count = 0
+    while count < 20:
+        row = random.randint(0,24)
+        item = random.randint(0,49)
+        screen.screen.blit(consts.MINE_IMG, (row, item))
+    pygame.display.update()
+    return game_field
+
