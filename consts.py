@@ -2,5 +2,5 @@
 import pygame
 
 GREEN = (69, 139, 0)
-BUSH = pygame.transform.scale(pygame.image.load("grass.png"), (80, 60))
+BUSH = pygame.transform.scale(pygame.image.load("grass.png"), (50, 60))
 
