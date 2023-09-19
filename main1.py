@@ -1,0 +1,1 @@
+#screen.fill((background_color))
